@@ -1,0 +1,46 @@
+{
+    "doLists": [
+        {
+            "id": 1,
+            "listName": "ToDo at school",
+            "task": false,
+            "nOfActive": 2,
+            "items": [{
+                "id": 1,
+                "taskName": "Go to library",
+                "taskDescriptiom": "Need a new book",
+                "deadline": "28.9.2022",
+                "task": true,
+                "checked": false
+            }, {
+                "id": 2,
+                "taskName": "Prepare for test",
+                "taskDescriptiom": "Discret Mathematics",
+                "deadline": "27.9.2022",
+                "task": true,
+                "checked": false
+            }]
+        },
+        {
+            "id": 1,
+            "listName": "ToDo at home",
+            "task": false,
+            "nOfActive": 2,
+            "items": [{
+                "id": 1,
+                "taskName": "Take out thrash",
+                "taskDescriptiom": "Need a new book",
+                "deadline": "26.9.2022",
+                "task": true,
+                "checked": false
+            }, {
+                "id": 2,
+                "taskName": "Wash the Dishes",
+                "taskDescriptiom": "Discret Mathematics",
+                "deadline": "26.9.2022",
+                "task": true,
+                "checked": false
+            }] 
+        }
+    ]
+}
