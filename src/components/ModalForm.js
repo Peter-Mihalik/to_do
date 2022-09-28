@@ -7,8 +7,12 @@ import { useFormik } from 'formik'
 import * as yup from 'yup'
 
 const StyledTextField = styled(TextField)`
-    width: 500px;
+    width: 20em;
+    @media only screen and (max-width: 600px) {
+        width: 10em;
+    }
 `
+
 
 const CustomCloseIcon = styled(CloseIcon)`
     position: absolute;
@@ -19,6 +23,7 @@ const CustomCloseIcon = styled(CloseIcon)`
     &:hover {
         color: grey;
     }
+    disp
 `
 
 //form validation - yup
@@ -60,8 +65,7 @@ export default function ModalForm({open, handleClose, handleSubmit, sending}) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
         sx={{
-            width: '50%',
-            display: 'block',
+            width: '65%',
             margin: '100px auto',
         }}
       >
@@ -70,7 +74,7 @@ export default function ModalForm({open, handleClose, handleSubmit, sending}) {
             <form onSubmit={formik.handleSubmit}>
                 <Grid container alignItems='center' direction='column' spacing={2}>
                     <Grid item>
-                        <Typography variant='h4' element='p'>Add new task</Typography>
+                        <Typography variant='h4' element='p' textAlign='center'>Add new task</Typography>
                     </Grid>
                     <Grid item>
                         <StyledTextField sx label='Task'
@@ -89,7 +93,7 @@ export default function ModalForm({open, handleClose, handleSubmit, sending}) {
                         helperText={formik.touched.taskDescription && formik.errors.taskDescription} />
                     </Grid>
                     <Grid item>
-                    <TextField
+                    <StyledTextField
                         id="datetime-local"
                         label="Deadline"
                         type="datetime-local"
